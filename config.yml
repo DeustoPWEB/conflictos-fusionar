@@ -15,6 +15,9 @@ preferences:
       value: cli
     - label: Use GitHub Desktop
       value: desktop
+    - label: Use VSCode
+      value: vscode
+      selected: true
 tags:
   - Git
   - Merge conflicts

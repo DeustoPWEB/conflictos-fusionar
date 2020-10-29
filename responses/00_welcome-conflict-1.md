@@ -70,6 +70,9 @@ Let's help our friends resolve this conflict.
     ```shell
     git push
     ```
+{% elsif preferences.gitTool == 'vscode' %}
+
+Remove conflict in VSCode
 
 {% elsif preferences.gitTool == 'desktop' %}
 
