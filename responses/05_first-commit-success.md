@@ -11,6 +11,9 @@ Para demostrarlo, voy a ser tu colega :wave:. En esta otra solicitud de extracci
 {% if preferences.gitTool == 'cli' %}
 1. Make sure master is up to date by checking out to `master`, and typing `git pull`. 
 1. Resolve the conflicts locally by checking out to the `add-education` branch, merging `master`, and repeating your previous steps.
+{% elseif preferences.gitTool == 'vscode' %}
+1. Asegúrate de que `master` está actualizada cambiándote a `master` desde el selector de ramas de la barra azul de la parte de abajo en VSCode, y haciendo clic en los puntos suspensivos y **Pull** en la pestaña **Source Control**.
+2. Resuelve los conflictos localmente cambiándote a la rama `add-education`, fusionando `master`, y repitiendo los pasos anteriores.
 {% elsif preferences.gitTool == 'desktop' %}
 1. Get any new changes by clicking **Fetch origin**.
 1. Resolve the conflicts locally by checking out to the `add-education` branch, merging `master`, and repeating your previous steps.

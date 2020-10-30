@@ -2,6 +2,8 @@
 
 Buen trabajo @{{ user.username }}, tu solicitud de extracción está libre de conflictos. :tada:
 
+> Ya he aprobado esta solicitud de extracción, así que si todavía ves "Review required" en la vista de fusión, prueba a recargar la página.
+
 ### :keyboard: Actividad: Fusiona esta solicitud de extracción
 
 Adelante, fusiona esta solicitud de extracción ahora.
