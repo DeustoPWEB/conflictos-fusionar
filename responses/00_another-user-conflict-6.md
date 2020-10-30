@@ -1,5 +1,5 @@
-## Cambio conflictivo
+## Conflicting change
 
-Esta solicitud de extracción añade cambios al archivo `_data/education.yml`. Es el mismo archivo que acabas de cambiar en tu solicitud de extracción.
+This pull request adds changes to the `_data/education.yml` file. It's the same file that you just changed in your pull request.
 
-Una vez que se haya combinado esta solicitud de extracción, tu solicitud de extracción tendrá un conflicto de fusión (o _merge conflict_). Esto es porque habrá habido cambios en el mismo fragmento del mismo archivo en dos ramas diferentes.
+After this pull request is merged, your pull request will have a merge conflict. That's because there will have been changes on two different branches to the same part of the same file.
