@@ -134,5 +134,5 @@ Ayudemos a nuestros amigos a resolver este conflicto.
 > A veces, la mejor manera de resolver un conflicto de fusión es añadir contenido de las dos ramas, ¡o incluso algo que no está en ninguna! Esta es la razón por la que Git necesita un ser humano que mire el código y haga los cambios apropiados.
 
 <hr>
-<h3 align="center">Watch below for my response.</h3>
+<h3 align="center">Mira mi respuesta más abajo.</h3>
 
