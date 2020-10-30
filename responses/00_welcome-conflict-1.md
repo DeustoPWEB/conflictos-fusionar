@@ -1,36 +1,36 @@
-# Welcome to Managing Merge Conflicts :tada:
+# Bienvenida a Gestionar conflictos al fusionar :tada:
 
-Hello, and welcome! If you're here to learn about and practice resolving merge conflicts, you're in the right place.
+Hola, y ¡bienvenida! Si estás aquí para aprender acerca de los conflictos al fusionar, y practicar, estás en el lugar correcto.
 
-In this course, you'll learn why merge conflicts happen and solve a few of them. The merge conflicts in this course are simple enough to solve from GitHub.com. But, if you'd prefer, you can solve them using the command line or other local tools.
+En este curso aprenderás por qué ocurren los conflictos al fusionar y resolverás unos pocos. Los conflictos de fusión de este curso son lo suficientemente sencillos como para que puedas resolverlo desde la interfaz web de GitHub.com. Aunque, si lo prefieres, puedes resolverlos usando la línea de comandos o alguna otra herramienta local.
 
-As an added bonus, the project we are using for this course is a resume hosted on [GitHub Pages](https://help.github.com/en/categories/github-pages-basics)! So, if you want to keep working after you complete this course, please feel free!
+Como extra, ¡el proyecto que usaremos para este curso es un CV alojado en [GitHub Pages](https://help.github.com/en/categories/github-pages-basics)! Así que, si quieres seguir trabajando en él después de completar este curso, por supuesto puedes seguir haciéndolo.
 
-Before starting this course, we recommend completing the [Introduction to GitHub Learning Lab]({{ host }}/{{ course.Owner.login }}/introduction-to-github) first. 
+Antes de que empieces este curso recomendamos que completes la [Introduction a GitHub]({{ host }}/{{ course.Owner.login }}/introduction-to-github). 
 
-> Note: You may notice that some branches and pull requests already exist. We'll be using them in later activities in this course.
+> Nota: Puede que te des cuenta de que ya existen algunas ramas y solicitudes de extracción. Las iremos usando más tarde en las actividades de este curso.
 
-### How merge conflicts happen
+### Cómo ocurren los conflictos de fusión
 
-A **Merge conflict** occurs when changes are made to the same part of the same file on two different branches. You usually find out about conflicts in a pull request. 
+Un **conflicto de fusión** ocurre cuando se han realizado cambios al mismo fragmento del mismo archivo en dos ramas diferentes. Generalmente te darás cuenta de que hay un conflicto durante una solicitud de extracción.
 
-This can be intimidating, but have no fear, Git knows how to handle this! It only needs a human to decide how to resolve the conflict.
+Esto puede resultar intimidatorio, pero no te asustes, Git sabe cómo gestionarlo. Solamente necesita un ser humano que decida cómo resolver el conflicto.
 
-## Step 1: Resolve a simple conflict
+## Paso 1: Resuelve un conflicto sencillo
 
-You may merge a lot of pull requests before you encounter your first merge conflict. That’s because Git is smart when it comes to merging. Unless you're paying close attention to other branches, you won't know about conflicts until you create a pull request.
+Puede que fusiones muchas solicitudes de extracción antes de siquiera encontrarte con tu primer conflicto de fusión. Esto es porque Git es inteligente en lo que respecta a las fusiones. A no ser que estés siguiendo muy de cerca las demás ramas, no sabrás que hay un conflicto hasta que crees una solicitud de extracción.
 
-This branch is a great example. In this scenario, two of our friends have been working in this repository. They both created branches, made changes to the `_config.yml` file, and opened pull requests. One pull request was merged to `master` without problems, but now the other pull request has a conflict.
+Esta rama es un gran ejemplo. En este escenario, dos de nuestros amigos han estado trabajando en este repositorio. Ambos han creado ramas, han hecho cambios al archivo `_config.yml`, y han abierto solicitudes de extracción. Una solicitud de extracción se ha fusionado con `master` sin ningún problema, pero la otra tiene un conflicto.
 
-The history of `master` and this branch look something like this:
+El histórico de `master` y esta rama tiene un aspecto parecido a esto:
 
 ![deviated branches](https://user-images.githubusercontent.com/13326548/36703493-b8f4d5ee-1b10-11e8-9f95-4ec9993fe704.png)
 
-Because this pull request changes the same lines in the `_config.yml` file, there is a merge conflict. 
+Como esta solicitud de extracción cambia las mismas líneas del archivo `_config.yml`, hay un conflicto de fusión. 
 
-Let's help our friends resolve this conflict.
+Ayudemos a nuestros amigos a resolver este conflicto.
 
-### :keyboard: Activity: Resolving your first merge conflict
+### :keyboard: Actividad: Resuelve tu primer conflicto de fusión
 
 {% if preferences.gitTool == 'cli' %}
 
@@ -70,30 +70,50 @@ Let's help our friends resolve this conflict.
     ```shell
     git push
     ```
-{% elsif preferences.gitTool == 'vscode' %}
 
-Remove conflict in VSCode
+{% elsif preferences.gitTool == 'vscode' %}
+1. En VS Code, abre la Paleta de Comandos (o _Command Palette_) usando <kbd>Ctrl+Mayús+P</kbd> en Windows, o <kbd>⌘+Mayús+P</kbd> en macOS. También puedes seguir [la documentación oficial de VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository) sobre clonar repositorios.
+1. Escribe `git clone`y presiona <kbd>Enter</kbd>
+2. Pega la URL del repositorio en la nueva ventana y presiona <kbd>Enter</kbd>:
+      ```shell
+      {{ thePayload.repository.clone_url }}
+      ```
+3. Selecciona la ubicación en el que quieres guardar el repositorio y haz clic en **Choose folder**. Después, abre la ubicación que seleccionaste (haciendo clic en **Open**).  
+4. Haz clic en `master` en la parte inferior de la ventana de VS Code. Esto abrirá la Paleta de Comandos con todos los comandos relacionados a ramas de Git
+5. Selecciona la rama `update-config` y asegúrate de que está actualizada. En la pestaña **Source Control**, haz clic en los puntos suspensivos y selecciona **Pull**
+6. Fusiona `master` a la rama `update-config`. Teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch..."
+7. Se abrirá una ventana en la parte inferior derecha informando de que existen conflictos, que puedes cerrar. En la barra lateral, los archivos con conflictos se muestran bajo el desplegable "Merge Changes" y con una `C` a su derecha. Abre el archivo `_config.yml` para editarlo
+8. Busca el fragmento marcado que empieza con `<<<<<<<  HEAD` y termina con `>>>>>>> master`. Estos marcadores los añade Git para señalarte el contenido que está generando el conflicto. 
+9. Elimina los cambios realizados sobre la rama `master` borrando todo el contenido debajo de `=======` y por encima de `>>>>>>> master`.
+10. Después, elimina los marcadores de conflicto suprimiendo las siguientes líneas:
+       ```
+       <<<<<<< update-config
+       =======
+        >>>>>>> master
+        
+11. Guarda el archivo. Desde la pestaña **Source Control**, añade el archivo recién modificado (debajo de "Merge changes") a la confirmación de cambios, escribe un mensaje descriptivo y presiona <kbd>Ctrl+Enter</kbd> o <kbd>Cmd+Enter</kbd> para realizar una confirmación de cambios.
+12. Haz clic en los puntos suspensivos y presiona **Push**.
 
 {% elsif preferences.gitTool == 'desktop' %}
 
 1. First, make sure you have [GitHub Desktop](https://desktop.github.com/) installed and [configured](https://help.github.com/en/desktop/getting-started-with-github-desktop/authenticating-to-github). 
-1. On the `code` tab of this repository, click the green **Clone or download** button. Click **Open in Desktop**. 
-1. In GitHub Desktop, confirm the blue **Clone** button in the pop up window. 
-1. Checkout to the `update-config` branch by clicking **Current branch**, and selecting `update-config`. 
-1. Merge `master` into the `update-config` branch by clicking **Current branch**, and selecting **Choose a branch to merge into update-config**. 
-1. Select the `master` branch, and click **Merge master into update-config**.
-1. You'll be prompted about the merge conflict, and asked if you'd like to resolve it in your default editor. Click the button to open the file in your default editor. 
-1. Look for the marked hunks that begin with  `<<<<<<<  update-config` and ends with `>>>>>>> master`. These markers are added by Git to show you the content that is in conflict.
-1. Remove the changes made on the master branch by deleting all of the content below the `=======` and above `>>>>>>> master`.
-1. Next, remove the merge conflict markers by deleting the following lines:
+2. On the `code` tab of this repository, click the green **Clone or download** button. Click **Open in Desktop**. 
+3. In GitHub Desktop, confirm the blue **Clone** button in the pop up window. 
+4. Checkout to the `update-config` branch by clicking **Current branch**, and selecting `update-config`. 
+5. Merge `master` into the `update-config` branch by clicking **Current branch**, and selecting **Choose a branch to merge into update-config**. 
+6. Select the `master` branch, and click **Merge master into update-config**.
+7. You'll be prompted about the merge conflict, and asked if you'd like to resolve it in your default editor. Click the button to open the file in your default editor. 
+8. Look for the marked hunks that begin with  `<<<<<<<  update-config` and ends with `>>>>>>> master`. These markers are added by Git to show you the content that is in conflict.
+9. Remove the changes made on the master branch by deleting all of the content below the `=======` and above `>>>>>>> master`.
+10. Next, remove the merge conflict markers by deleting the following lines:
 
        <<<<<<< update-config
        =======
         >>>>>> master
 
-1. Save and close the file.
-1. Back in GitHub Desktop, click **Commit merge**.
-1. Push your changes back to the remote by clicking **Push origin**.
+11. Save and close the file.
+12. Back in GitHub Desktop, click **Commit merge**.
+13. Push your changes back to the remote by clicking **Push origin**.
 
 {% else %}
 
@@ -111,7 +131,7 @@ Remove conflict in VSCode
 
 {% endif %}
 
-> Sometimes, the best way to resolve a merge conflict is to add content that's from both branches, or even something that isn't on either! This is why Git needs a human to look at the code and make the proper fixes.
+> A veces, la mejor manera de resolver un conflicto de fusión es añadir contenido de las dos ramas, ¡o incluso algo que no está en ninguna! Esta es la razón por la que Git necesita un ser humano que mire el código y haga los cambios apropiados.
 
 <hr>
 <h3 align="center">Watch below for my response.</h3>
