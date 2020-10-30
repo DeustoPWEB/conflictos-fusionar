@@ -1,10 +1,10 @@
-## Step 5: Create your own conflict
+## Paso 5: Crea tu propio conflicto
 
-So far, this pull request doesn't have any conflicts. I have added some new branch protections to prevent you from merging before you're ready.
+Hasta ahora, esta solicitud de extracción no tiene ningún conflicto. He añadido algunas protecciones adicionales a las ramas para evitar que combines nada antes de que esté listo.
 
-In the last activity, you solved a merge conflict that someone else created. This time, you'll create the merge conflict yourself.
+En la última actividad, has resuelto un conflicto creado por otra persona. Esta vez vas a crear el conflicto de fusión tú misma/o.
 
-### :keyboard: Activity: Make changes on this branch
+### :keyboard: Actividad: Haz cambios en esta rama
 
 {% if preferences.gitTool == 'cli' %}
 1. Check out to this branch:
@@ -22,6 +22,13 @@ In the last activity, you solved a merge conflict that someone else created. Thi
     ```shell
     git push
     ```
+{% elsif preferences.gitTool == 'vscode' %}
+1. Cámbiate a la rama `add-education` haciendo clic en el nombre de la rama activa en la barra azul de la parte inferior en VS Code.
+2. Abre el archivo `_data/education.yml`.
+3. Modifica el contenido de las líneas `degree:`, `uni:`, `year:`, y `summary:`.
+4. Guarda los cambios al archivo.
+5. En la pestaña **Source Control**, añade el archivo `_data/education.yml` a la confirmación de cambios, escribe un mensaje descriptivo y presiona **Ctrl+Enter** o **Cmd+Enter**
+6. Haz clic en los puntos suspensivos y presiona **Push**
 {% elsif preferences.gitTool == 'desktop' %}
 1. Checkout to the `add-education` branch.
 1. Merge `master` into the `add-education` branch.
@@ -40,6 +47,6 @@ In the last activity, you solved a merge conflict that someone else created. Thi
 1. Click the **Commit changes** button, making sure the "Commit directly to the **add-education** branch" option is selected.
 {% endif %}
 <hr>
-<h3 align="center">Watch below for my response.</h3>
+<h3 align="center">Mira mi respuesta más abajo.</h3>
 
 [octicon-kebab-horizontal]: https://unpkg.com/octicons/build/svg/kebab-horizontal.svg
