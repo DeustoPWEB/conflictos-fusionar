@@ -40,10 +40,10 @@ Esta vez, sin embargo, lo he hecho un poquito más complicado.
     ```
 {% elsif preferences.gitTool == 'vscode' %}
 1. Cámbiate a la rama `add-experience` haciendo clic en el nombre de la rama activa en la barra azul de la parte inferior en VS Code, y asegúrate de que está actualizada desde la pestaña **Source Control**, haciendo clic en los puntos suspensivos y seleccionando **Pull**.
-2. Fusiona `master` a la rama `add-experience`. Teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch..." [Go on...]
-3. Verás que hay dos archivos con conflictos: `_data/experience.yml` y `_data/interests.yml`.
+2. Fusiona `master` a la rama `add-experience`. Teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch...", y selecciona la rama `master`. Se abrirá una ventana en la parte inferior derecha informando de que existen conflictos, que puedes cerrar. 
+3. En la pestaña **Source Control**, los archivos con conflictos se muestran bajo el desplegable "Merge Changes" y con una `C` a su derecha. Verás que hay dos archivos con conflictos: `_data/experience.yml` y `_data/interests.yml`.
 4. Abre `_data/experience.yml`, elimina los marcadores de conflicto y deja el contenido que quieras conservar. Guarda los cambios.
-5. Con los conflictos de fusión resueltos y los marcadores eliminados del archivo `_data/experience.yml` añade el archivo a la confirmación de cambios haciendo clic en `+` al lado del nombre del archivo en la pestaña **Source Control**.
+5. Con los conflictos de fusión resueltos y los marcadores eliminados del archivo `_data/experience.yml`, añade el archivo a la confirmación de cambios haciendo clic en `+` al lado del nombre del archivo en la pestaña **Source Control**.
 6. Abre `_data/interests.yml`, elimina los marcadores de conflicto y deja el contenido que quieras conservar. Guarda los cambios.
 7. Desde la pestaña **Source Control**, añade el archivo `_data/interests.yml` (haciendo clic en `+`), escribe un mensaje descriptivo y presiona <kbd>Ctrl+Enter</kbd> o <kbd>Cmd+Enter</kbd> para realizar una confirmación de cambios.
 8. Haz clic en los puntos suspensivos y presiona **Push**.

@@ -30,6 +30,8 @@ You can also merge locally:
     git push
     ```
 {% elsif preferences.gitTool == 'vscode' %}
+También puedes hacer la fusión localmente, en tu ordenador:
+
 1. Cámbiate a la rama `add-experience` haciendo clic en el nombre de la rama activa en la barra azul de la parte inferior en VS Code, y asegúrate de que está actualizada desde la pestaña **Source Control**, haciendo clic en los puntos suspensivos y seleccionando **Pull**.
 2. Fusiona `master` a la rama `add-experience`. Teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch..." [Go on...]
 3. Verás que hay dos archivos con conflictos: `_data/experience.yml` y `_data/interests.yml`.

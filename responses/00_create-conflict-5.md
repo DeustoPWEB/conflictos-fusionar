@@ -4,7 +4,7 @@ Hasta ahora, esta solicitud de extracción no tiene ningún conflicto. He añadi
 
 En la última actividad, has resulesto un conflicto creado por otra persona. Esta vez vas a crear el conflicto de fusión tú misma/o.
 
-### :keyboard: Actividad: Make changes on this branch
+### :keyboard: Actividad: Realiza cambios a esta rama
 
 {% if preferences.gitTool == 'cli' %}
 1. Check out to this branch:
@@ -27,7 +27,7 @@ En la última actividad, has resulesto un conflicto creado por otra persona. Est
 2. Abre el archivo `_data/education.yml`.
 3. Modifica el contenido de las líneas `degree:`, `uni:`, `year:`, y `summary:`.
 4. Guarda los cambios al archivo.
-5. En la pestaña **Source Control**, añade el archivo `_data/education.yml` a la confirmación de cambios, escribe un mensaje descriptivo y presiona **Ctrl+Enter** o **Cmd+Enter**
+5. En la pestaña **Source Control**, añade el archivo `_data/education.yml` a la confirmación de cambios, escribe un mensaje descriptivo y presiona <kbd>Ctrl+Enter</kbd> o <kbd>Cmd+Enter</kbd>
 6. Haz clic en los puntos suspensivos y presiona **Push**
 {% elsif preferences.gitTool == 'desktop' %}
 1. Checkout to the `add-education` branch.

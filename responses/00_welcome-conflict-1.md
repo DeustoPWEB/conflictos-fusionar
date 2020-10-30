@@ -79,12 +79,12 @@ Ayudemos a nuestros amigos a resolver este conflicto.
       {{ thePayload.repository.clone_url }}
       ```
 3. Selecciona la ubicación en el que quieres guardar el repositorio y haz clic en **Choose folder**. Después, abre la ubicación que seleccionaste (haciendo clic en **Open**).  
-4. Haz clic en `master` en la parte inferior de la ventana de VS Code. Esto abrirá la Paleta de Comandos con todos los comandos relacionados a ramas de Git
-5. Selecciona la rama `update-config` y asegúrate de que está actualizada. En la pestaña **Source Control**, haz clic en los puntos suspensivos y selecciona **Pull**
-6. Fusiona `master` a la rama `update-config`. Teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch..."
+4.  En la pestaña **Source Control**, haz clic en los puntos suspensivos y selecciona **Pull** para asegurarte de que está actualizada.
+5. Haz clic en `master` en la parte inferior de la ventana de VS Code. Esto abrirá la Paleta de Comandos con todos los comandos relacionados a ramas de Git; selecciona la rama `origin/update-config` 
+6. Fusiona `master` a la rama `update-config`. Para esto, teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch..."
 7. Se abrirá una ventana en la parte inferior derecha informando de que existen conflictos, que puedes cerrar. En la barra lateral, los archivos con conflictos se muestran bajo el desplegable "Merge Changes" y con una `C` a su derecha. Abre el archivo `_config.yml` para editarlo
 8. Busca el fragmento marcado que empieza con `<<<<<<<  HEAD` y termina con `>>>>>>> master`. Estos marcadores los añade Git para señalarte el contenido que está generando el conflicto. 
-9. Elimina los cambios realizados sobre la rama `master` borrando todo el contenido debajo de `=======` y por encima de `>>>>>>> master`.
+9.  Elimina los cambios realizados sobre la rama `master` borrando todo el contenido debajo de `=======` y por encima de `>>>>>>> master`.
 10. Después, elimina los marcadores de conflicto suprimiendo las siguientes líneas:
        ```
        <<<<<<< update-config
