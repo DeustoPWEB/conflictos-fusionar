@@ -1,78 +1,78 @@
-## Nice work
+## Buen trabajo
 
 ![celebrate](https://octodex.github.com/images/benevocats.jpg)
 
-Congratulations @{{ user.username }}, you've completed this course!
+Enhorabuena @{{ user.username }}, ¡has completado este curso!
 
-### What went well
+### Lo que ha ido bien
 
-Before I say good-bye, here's a recap of all the tasks you've accomplished in your repository:
+Antes de despedirme, aquí tienes un repaso de lo que has conseguido en tu repositorio:
 
-- You learned why merge conflicts happen
-- You resolved a simple merge conflict
-- You resolved a multi-file merge conflict 
-- You created a merge conflict, and resolved it!
+- Has aprendido por qué ocurren los conflictos de fusión
+- Has resuelto un conflicto de fusión sencillo
+- Has resuelto un conflicto de fusión que afectaba a múltiples archivos
+- Has creado un conflicto de fusión, ¡y lo has resuelto!
 
-### What's next?
+### ¿Y ahora, qué?
 
-Here are some instructions you can use to keep working on your resumé:
+Aquí tienes algunas instrucciones que puedes usar para seguir trabajando en tu CV:
 
 <details>
- <summary>Finishing the resume</summary>
+ <summary>Termina tu CV</summary>
  <hr>
  
-  #### Finishing the resume
+  #### Termina tu CV
  
-  To update the other sections of the resume, create a new branch and edit the files found in the `_data` folder.
+  Para actualizar las demás secciones de tu CV, crea una nueva rama y edita los archivos que hay en la carpeta `_data`.
 
-  For example, to modify the "Projects" section, edit the `_data/projects.yml` file. After making your changes, create a new pull request and merge your changes.
+  Por ejemplo, para modificar la sección "Projects", edita el archivo `_data/projects.yml`. Después de hacer tus cambios, crea una nueva solicitud de extraccion y fusiona tus cambios.
+
+ <hr>
+</details>
+
+<details>
+ <summary>Cambia la imagen</summary>
+ <hr>
+ 
+  #### Cambia la imagen
+ 
+  Si te gustaría cambiar la imagen que se usa en tu CV, necesitas hacer algunos cambios a los archivos.
+
+ 1. Crea una nueva rama, y nómbrala algo com `new-avatar`.
+ 2. Navega al directorio  `images` y haz clic en el botón **Upload files**.
+ 3. [Arrastra tu archivo de imagen](https://help.github.com/articles/adding-a-file-to-a-repository/).
+ 4. Confirma tu cambio haciendo clic en **Commit changes**.
+ 5. En la rama `new-avatar`, abre el archivo `_layouts/resume.html` y edita la línea 16. Sustituye `images/bob-avatar.jpg` por `images/TUNOMBREDEARCHIVO`.
+ 6. Crea una solicitud de extracción.
+ 7. Combina la solicitud de extracción y elimina la rama.
  
  <hr>
 </details>
 
 <details>
- <summary>Changing the picture</summary>
+ <summary>Activa GitHub Pages</summary>
  <hr>
  
-  #### Changing the picture
+  #### Activa GitHub Pages
  
-  If you would like to change the image used on your resume, you need to make a few changes to the files.
+  Cuando estés contenta/o con tu CV, necesitas publicarlo con GitHub Pages. Este CV está preparado para GitHub Pages, solamente necesitas activarlo. Sigue estos pasos para activar GitHub Pages cuando estés lista/o para publicar tu CV:
 
- 1. Create a new branch, maybe name it something like `new-avatar`.
- 1. Navigate to the `images` directory and click the **Upload files** button.
- 1. [Drag and drop your image](https://help.github.com/articles/adding-a-file-to-a-repository/).
- 1. Commit your change by clicking **Commit changes**.
- 1. On the `new-avatar` branch, open the `_layouts/resume.html` file and edit line 16. Replace `images/bob-avatar.jpg` with `images/YOURFILENAME`.
- 1. Create a pull request.
- 1. Merge the pull request, and delete the branch.
+ 1. Haz clic en la pestaña [**Settings**]({{ repoUrl }}/settings).
+ 2. Haz scroll hacia abajo hasta la sección "GitHub Pages".
+ 3. En el desplegable "Source", selecciona **master branch**.
+ 4. Haz clic en **Save**.
+ 5. :construction: ¡Cuidado! :construction: Asegúrate de que no ves ningún [error después de hacer clic en "Save"](https://user-images.githubusercontent.com/13326548/36769372-bc9b43d4-1bf8-11e8-8050-2b08cf8d146b.png). Si apareciera alguno, tu página no se construirá correctamente y este paso estará incompleto.
  
- <hr>
-</details>
-
-<details>
- <summary>Enabling GitHub Pages</summary>
- <hr>
- 
-  #### Enabling GitHub Pages
- 
-  When you are happy with your resume, you will need to publish it with GitHub Pages. This resume is ready for GitHub Pages, you just need to turn it on. Follow these steps to enable GitHub Pages when you are ready to publish your resume:
-
- 1. Click on the [**Settings**]({{ repoUrl }}/settings) tab.
- 1. Scroll to the "GitHub Pages" section.
- 1. In the "Source" drop-down, select **master branch**.
- 1. Click **Save**.
- 1. :construction: Warning! :construction: Make sure you don't see any [errors after you select save](https://user-images.githubusercontent.com/13326548/36769372-bc9b43d4-1bf8-11e8-8050-2b08cf8d146b.png). If you do, your page won't build correctly and this step will be incomplete.
- 
-Your GitHub Pages resumé site will be live very shortly at [the proper URL](https://help.github.com/en/articles/user-organization-and-project-pages). 
+Tu CV con GitHub Pages estará visible en seguida en [la URL apropiada](https://help.github.com/en/articles/user-organization-and-project-pages). 
  <hr>
 </details>
 
-### Keep Learning
+### Sigue aprendiendo
 
-Want to work on resolving merge conflicts using the command line? Check out [this documentation](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
+¿Quieres trabajar resolviendo conflictos de fusión a través de la línea de comandos? Comprueba [esta documentación](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/).
 
-Want to keep learning? Feel free to [check out our other courses]({{ host }}/courses)?
+¿Quieres seguir aprendiendo? Siéntete libre de [revisar otros cursos]({{ host }}/courses).
 
 <hr>
-<h3 align="center">I won't respond to this issue, go ahead and close it when finished!</h3>
+<h3 align="center">No voy a responder a esta incidencia, ¡puedes cerrarla cuando termines!</h3>
 

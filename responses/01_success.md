@@ -1,24 +1,24 @@
-You did it, @{{ user.username }}! Nice job resolving the conflict. Most conflicts in your day to day experience should be pretty simple, as in that activity. You may need to discuss the resolution with your peers. If your team is working together and reviewing pull requests, resolving conflicts is easy.
+¡Lo has conseguido, @{{ user.username }}! Buen trabajo resolviendo ese conflicto. La mayoría de conflictos en tu día a día serán bastante sencillos, como el de esta actividad. Puede que necesites discutir la resolución con tu equipo. Si estáis trabajando juntos y revisando las solicitudes de extracción, resolver conflictos es fácil.
 
-### What just happened?
+### ¿Qué acaba de pasar?
 
-Resolving a conflict doesn't automatically merge the Pull Request in GitHub. Instead, it stores the resolution of the conflict in a merge commit and allows you and your team to keep working.
+Resolver un conflicto no fusiona atuomáticamente una solicitud de extracción en GitHub. En ves de eso, almacena la resolucion en una confirmación de cambios de fusión y te permite a ti y a tu equipo seguir trabajando.
 
-To resolve a conflict, GitHub performs what is known as a *reverse merge*. This means that the changes from the `master` branch were  merged into your `update-config` branch. 
+Para resolver un conflicto, GitHub realiza lo que se conoce como *fusión inversa*. Esto significa que los cambios de la rama `master` se han fusionado a tu rama `update-config`. 
 
-With a reverse merge, only the `update-config` branch is updated. This allows you to test the resolved code on your branch before you merge it into `master`. The `master` branch should be treated as production ready, bug-free code.
+Con una fusión inversa, solamente se actualiza la rama `update-config`. Esto te permite probar el código resuelto en tu rama antes de que lo fusiones a `master`. La rama `master` debería tratarse como lista para publicación, o código libre de errores.
 
-## Step 2: Merge the first resolved pull request
+## Paso 2: Fusiona la primera solicitud de extracción resuelta
 
-Go ahead and merge this pull request now.
+Adelante, fusiona esta solicitud de extracción ahora.
 
-> I have already approved this pull request, so if you still see "Review required" in the merge view, try refreshing the page.
+> Ya he aprobado esta solicitud de extracción, así que si todavía ves "Review required" en la vista de fusión, prubea a recargar la página.
 > 
-### :keyboard: Activity: Merge this pull request
+### :keyboard: Actividad: Fusiona esta solicitud de extracción
 
-1. Click **Merge pull request** below.
-1. Click **Confirm merge**.
-1. Click **Delete branch** and get ready for your next activity.
+1. Haz clic en **Merge pull request** abajo.
+1. Haz clic en **Confirm merge**.
+1. Haz clic en **Delete branch** y prepárate para tu siguiente actividad.
 
 {% if preferences.gitTool == 'cli' %}
 You can also merge locally:
@@ -39,6 +39,14 @@ You can also merge locally:
     ```shell
     git push
     ```
+{% if preferences.gitTool == 'vscode' %}
+También puedes hacer la fusión localmente, en tu ordenador:
+
+1. Cámbiate a la rama `master` haciendo clic en el nombre de la rama activa en la barra azul de abajo en VSCode, y seleccionando `master`
+2. Asegúrate de que está actualizada. Desde la pestaña **Source Control**, haz clic en los puntos suspensivos y selecciona **Pull**
+3. Fusiona la rama `{{ branch }}` a `master`. Teclea <kbd>Ctrl+Mayús+P</kbd> o <kbd>⌘+Mayús+P</kbd>, empieza a escribir "git merge" y selecciona "Git: Merge Branch..." [Go on...]
+4. Escribe un mensaje de confirmación, si se te pide
+5. Sube tus cambios haciendo clic en los puntos suspensivos y seleccionando **Push**
 {% elsif preferences.gitTool == 'desktop' %}
 You can also merge locally:
 1. Checkout to the `master` branch by clicking **Current branch**, and selecting `master`.
@@ -49,5 +57,5 @@ You can also merge locally:
 {% endif %}
 
 <hr>
-<h3 align="center">Watch below for my response.</h3>
+<h3 align="center">Mira mi respuesta más abajo.</h3>
 

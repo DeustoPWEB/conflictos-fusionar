@@ -1,4 +1,4 @@
-Good job! You've solved more merge conflicts.
+¡Buen trabajo! Has resuelto más conflictos de fusión.
 
 <hr>
-<h3 align="center">Go to <a href="{{ url }}">the next pull request</a> now.</h3>
+<h3 align="center">Continua en la <a href="{{ url }}">siguiente solicitud de extracción</a> ahora.</h3>
