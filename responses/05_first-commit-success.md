@@ -11,6 +11,8 @@ Para demostrarlo, voy a ser tu colega :wave:. En esta otra solicitud de extracci
 {% if preferences.gitTool == 'cli' %}
 1. Make sure master is up to date by checking out to `master`, and typing `git pull`. 
 1. Resolve the conflicts locally by checking out to the `add-education` branch, merging `master`, and repeating your previous steps.
+{% elsif preferences.gitTool == 'vscode' %}
+VSCode instructions
 {% elsif preferences.gitTool == 'desktop' %}
 1. Get any new changes by clicking **Fetch origin**.
 1. Resolve the conflicts locally by checking out to the `add-education` branch, merging `master`, and repeating your previous steps.
