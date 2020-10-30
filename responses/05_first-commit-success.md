@@ -1,19 +1,16 @@
-## ¿De dónde vienen los conflictos?
+## Where do conflicts come from?
 
-En un escenario del mundo real, es posible que un compañero o colega haya editado las mismas líneas del mismo archivo que tú en tu solicitud de extracción.
+In a real world scenario, it's possible that a peer or colleague will have edited the same file in the same place as your pull request.
 
-Para demostrarlo, voy a ser tu colega :wave:. En esta otra solicitud de extracción {{ secondPR }}, verás que el archivo `education` ha sido modificado. La otra solicitud de extracción se acaba de fusionar a `master`, lo cual significa que ahora hay un conflicto en tu solicitud de extracción.
+To demonstrate, I'll stand in as your colleague :wave:. In this other pull request {{ secondPR }}, you'll see that the education file has been changed. The other pull request was just merged to `master`, which means there's now a conflict in your pull request.
 
-## Paso 6: Resuelve nuevos conflictos
+## Step 6: Resolve new conflicts
 
-### :keyboard: Actividad: Resuelve el conflicto
+### :keyboard: Activity: Resolve the conflict
 
 {% if preferences.gitTool == 'cli' %}
 1. Make sure master is up to date by checking out to `master`, and typing `git pull`. 
 1. Resolve the conflicts locally by checking out to the `add-education` branch, merging `master`, and repeating your previous steps.
-{% elseif preferences.gitTool == 'vscode' %}
-1. Asegúrate de que `master` está actualizada cambiándote a `master` desde el selector de ramas de la barra azul de la parte de abajo en VSCode, y haciendo clic en los puntos suspensivos y **Pull** en la pestaña **Source Control**.
-2. Resuelve los conflictos localmente cambiándote a la rama `add-education`, fusionando `master`, y repitiendo los pasos anteriores.
 {% elsif preferences.gitTool == 'desktop' %}
 1. Get any new changes by clicking **Fetch origin**.
 1. Resolve the conflicts locally by checking out to the `add-education` branch, merging `master`, and repeating your previous steps.
@@ -21,7 +18,7 @@ Para demostrarlo, voy a ser tu colega :wave:. En esta otra solicitud de extracci
 1. In the "This branch has conflicts that must be resolved" section of the pull request, click **Resolve conflicts**.
 {% endif %}
 
-Como el conflicto lo has creado tú, siéntete libre de resolverlo como mejor te parezca.
+Because you created the conflict, feel free to resolve this conflict as you wish.
 
 <hr>
-<h3 align="center">Vuelve a esta solicitud de extracción para los próximos pasos.</h3>
+<h3 align="center">Return to this pull request for next steps.</h3>
